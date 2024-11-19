@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    color: #4B0082;
+}
+
+.page {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#upload-area {
+    border: 2px dashed #4B0082;
+    padding: 40px;
+    background-color: #eaeaea;
+    cursor: pointer;
+}
+
+#upload-area p {
+    font-size: 18px;
+    color: #666;
+}
+
+#upload-area button {
+    background-color: #4B0082;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#file-info {
+    background-color: #d1a85c;
+    padding: 20px;
+    display: inline-block;
+}
+
+#fileName {
+    font-style: italic;
+    color: #4B0082;
+}
+
+#edit {
+    font-size: 14px;
+    color: #4B0082;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+button {
+    background-color: #4B0082;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#playerList {
+    list-style: none;
+    padding: 0;
+}
+
+#playerList li {
+    background-color: #ccc;
+    padding: 10px;
+    margin: 5px 0;
+    color: black;
+}
+
+#playerList li:hover {
+    background-color: #d1a85c;
+    color: #4B0082;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+
+
+/* Table styling to resemble Microsoft Excel */
+.excel-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+.excel-table th, .excel-table td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+.excel-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+/* Hover effect */
+.excel-table tr:hover {
+    background-color: #e6f7ff;
+}
+/* Selected row styling */
+.excel-table tr.selected {
+    background-color: #cce7ff;
+}
+
+.accepted_recruit {
+    color: green;
+}
+.rejected_recruit {
+    color: red;
+}

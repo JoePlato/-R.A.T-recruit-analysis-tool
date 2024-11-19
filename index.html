@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruit Regression Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="desktop1" class="page">
+        <h1>Recruit Regression Calculator</h1>
+        <div id="upload-area" ondrop="handleDrop(event)" ondragover="allowDrop(event)">
+            <p>Drop or Upload File<br><span>Supported Format: .CSV</span></p>
+            <button onclick="browseFile()" type="button">Drop or Upload File</button>
+            <input type="file" id="fileInput" accept=".csv" onchange="handleFileSelect(event)" style="display: none;">
+        </div>
+    </div>
+
+    <div id="desktop2" class="page" style="display: none;">
+        <h1>Recruit Regression Calculator</h1>
+        <div id="file-info">
+            <p id="fileName">your_file_name</p>
+            <button type="button" id="edit" onclick="goBack()">Edit</button>
+        </div>
+        <button type="button" onclick="goToDesktop3()">EVAL</button>
+    </div>
+
+    <div id="desktop3" class="page" style="display: none;">
+        <h1>Recruit Regression Calculator</h1>
+        <h2>Results</h2>
+        <table id="excelTable" class="excel-table">
+            <thead>
+                <tr>
+                    <th scope="col">NAME</th>
+                    <th scope="col">RECOMMEND</th>
+                    <th scope="col">HHAND</th>
+                    <th scope="col">HHEIGHT</th>
+                    <th scope="col">HWEIGHT</th>
+                    <th scope="col">HWING</th>
+                    <th scope="col">HVERT</th>
+                    <th scope="col">HBROAD</th>
+                    <th scope="col">H401</th>
+                    <th scope="col">H402</th>
+                    <th scope="col">HSHUT</th>
+                    <!-- Add more columns as needed -->
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be populated dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</body>
+</html>
