@@ -1,4 +1,4 @@
-import ScriptForWebsite
+import recruitAnalysis
 
 from flask import Flask, jsonify, request
 from flask_cors import CORS
@@ -14,7 +14,7 @@ def get_thresholds():
 
         # Process the file path here
         # For example, print it or perform some action
-        player_results = ScriptForWebsite.math_stuff(file_path)
+        player_results = recruitAnalysis.math_stuff(file_path)
         return jsonify({
             'results': player_results
         })
