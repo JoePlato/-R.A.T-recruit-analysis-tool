@@ -63,10 +63,10 @@ if %errorlevel% neq 0 (
 :: Wait for the server to start (optional, tweak delay as needed)
 timeout /t 2 >nul
 
-:: Open the web app in the default browser
-echo Launching web app...
-start http://127.0.0.1:5000
+:: Open index.html in the default browser
+echo Launching index.html...
+start "" "%cd%\index.html"
 
 :: Keep the script running (optional, in case you want to monitor)
-echo Application is running. Press Ctrl+C to exit.
-pause
+::echo Application is running. Press Ctrl+C to exit.
+::pause
