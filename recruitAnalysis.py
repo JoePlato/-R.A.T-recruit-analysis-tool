@@ -7,12 +7,15 @@ from sklearn import linear_model as lm
 import scipy.integrate as integrate
 import scipy.special as special
 import math
+from dotenv import load_dotenv
+import os
 
 def math_stuff(filePath):
     #read in JMU data
     #
     df = pd.read_csv(r"Assets/JMUFBDATA.csv")
-
+    load_dotenv()
+    signifValue = os.getenv("SIGNIFICANCE")
     #set column headers
     cdata = df.columns
 
@@ -170,7 +173,7 @@ def math_stuff(filePath):
 
         #75th quantile for sig
 
-        if significance > 0.3:
+        if significance > signifValue:
             # print('We reject the recruit because they were above the significance threshold.')
             # print(f'The significance of change in the model from the recruit is {significance}.')
             sig_accept = False
