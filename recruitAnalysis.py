@@ -15,7 +15,7 @@ def math_stuff(filePath):
     #
     df = pd.read_csv(r"Assets/JMUFBDATA.csv")
     load_dotenv()
-    signifValue = os.getenv("SIGNIFICANCE")
+    signifValue =  float(os.getenv("SIGNIFICANCE"))
     #set column headers
     cdata = df.columns
 
